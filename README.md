@@ -11,11 +11,11 @@ Commands learned:
 - 'touch' create files
 - 'cp' copy files
      'cp -r'  copy folders
-     'cp -a' copy by save information
+     'cp -a' copy files/directories and preserve attributes
   -'mv' - move & rename files
   -'rm' remove files
        'rm -r' remove folders
-       'rm -rf'  
+       'rm -rf'  force remove directories/files recursively (dangerous)
 
   ** Today I learned**:
   - Linux paths start from '/'
@@ -37,4 +37,36 @@ Commands learned:
 - Change 'rwx' to numbers ;
 -    r =4 , w=2 , x=1
 -    Ex. rwx = 4+2+1 = 7 , rwx= 777 
-- 
+- End of Day2. 2026 June 1
+
+- #Day 3
+  
+
+**Topic: User Management**
+
+**Commands learned:**
+- `useradd` - create a new user
+- `adduser` - create a new user interactively
+- `passwd` - set or change user password
+- `usermod` - modify user account
+- `userdel` - delete a user
+- `id` - show user ID and group IDs
+- `groups` - show user groups
+
+**Today I learned:**
+- Linux can have multiple users on the same system.
+- Each user has a UID (User ID).
+- A user can belong to one or more groups.
+- `passwd` is used to set or change a user's password.
+- `id` and `groups` help check user identity and permissions.
+
+**Practice:**
+```bash
+sudo adduser testuser
+id testuser
+groups testuser
+sudo passwd testuser
+sudo usermod -s /bin/bash testuser
+sudo userdel testuser
+
+#End of Day 3. 2026 June 2
