@@ -1,5 +1,5 @@
 # linux-notes
-#Day 1
+>>>Day 1
 Commands learned: 
 - 'pwd' - show currect directory
 - 'ls' - list files
@@ -24,7 +24,7 @@ Commands learned:
 
    End of Day 1. 2026 May 31
 
-#Day 2
+>>>Day 2
 - Permissions
 - Access : Usern / Group / Other
 - permissions : r (read permission) w (edite & delete permission) x (Execut permission)
@@ -39,7 +39,7 @@ Commands learned:
 -    Ex. rwx = 4+2+1 = 7 , rwx= 777 
 - End of Day2. 2026 June 1
 
-- #Day 3
+- >>>Day 3
   
 
 **Topic: User Management**
@@ -72,11 +72,11 @@ sudo userdel testuser
 #End of Day 3. 2026 June 2
 
 
-#Day 4
+>>>Day 4
 
-Topic: Group Management
+**Topic:** Group Management
 
-Commands learned:
+**Commands learned:**
 - `groupadd` - create a new group
 - `groupdel` - delete a group
 - `usermod -aG` - add user to a secondary group
