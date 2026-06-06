@@ -69,7 +69,7 @@ sudo passwd testuser
 sudo usermod -s /bin/bash testuser
 sudo userdel testuser
 
-#End of Day 3. 2026 June 2
+End of Day 3. 2026 June 2
 
 
 >>>Day 4
@@ -102,5 +102,3 @@ sudo mkdir /srv/devops-project
 sudo chgrp devops /srv/devops-project
 sudo chmod 770 /srv/devops-project
 ls -ld /srv/devops-project
-
-End of Day 4. 2026 June 6
