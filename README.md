@@ -103,4 +103,4 @@ sudo chgrp devops /srv/devops-project
 sudo chmod 770 /srv/devops-project
 ls -ld /srv/devops-project
 
-End of Day 4. 2026 June 7
+End of Day 4. 2026 June 6
