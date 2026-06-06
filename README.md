@@ -70,3 +70,37 @@ sudo usermod -s /bin/bash testuser
 sudo userdel testuser
 
 #End of Day 3. 2026 June 2
+
+
+#Day 4
+
+Topic: Group Management
+
+Commands learned:
+- `groupadd` - create a new group
+- `groupdel` - delete a group
+- `usermod -aG` - add user to a secondary group
+- `groups` - show user groups
+- `chgrp` - change group ownership
+- `chmod` - change permissions
+
+**Today I learned:**
+- Groups help manage permissions for multiple users.
+- `sudo` is required for creating users and groups.
+- `usermod -aG` adds a user to a group safely.
+- `/srv/project` and `~/srv/project` are different paths.
+- `chmod 770` gives full access to owner and group, but no access to others.
+
+**Practice:**
+```bash
+sudo groupadd devops
+sudo adduser testdev
+sudo usermod -aG devops testdev
+groups testdev
+
+sudo mkdir /srv/devops-project
+sudo chgrp devops /srv/devops-project
+sudo chmod 770 /srv/devops-project
+ls -ld /srv/devops-project
+
+End of Day 4. 2026 June 7
