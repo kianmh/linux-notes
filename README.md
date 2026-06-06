@@ -59,8 +59,7 @@ Commands learned:
 - A user can belong to one or more groups.
 - `passwd` is used to set or change a user's password.
 - `id` and `groups` help check user identity and permissions.
-
-**Practice:**
+- Practice:
 ```bash
 sudo adduser testuser
 id testuser
@@ -69,8 +68,7 @@ sudo passwd testuser
 sudo usermod -s /bin/bash testuser
 sudo userdel testuser
 
-End of Day 3. 2026 June 2
-
+End of day 3. 2026 june 2
 
 #Day 4
 
@@ -90,17 +88,15 @@ End of Day 3. 2026 June 2
 - `usermod -aG` adds a user to a group safely.
 - `/srv/project` and `~/srv/project` are different paths.
 - `chmod 770` gives full access to owner and group, but no access to others.
+- Practice:
+bash
+-sudo groupadd devops
+-sudo adduser testdev
+-sudo usermod -aG devops testdev
+-groups testdev
+-sudo mkdir /srv/devops-project
+-sudo chgrp devops /srv/devops-project
+-sudo chmod 770 /srv/devops-project
+-ls -ld /srv/devops-project
 
-**Practice:**
-```bash
-sudo groupadd devops
-sudo adduser testdev
-sudo usermod -aG devops testdev
-groups testdev
-
-sudo mkdir /srv/devops-project
-sudo chgrp devops /srv/devops-project
-sudo chmod 770 /srv/devops-project
-ls -ld /srv/devops-project
-
-End of Day 4. 2026 June 6
+End of Day 4. 2026 june 6
