@@ -100,3 +100,43 @@ bash
 -ls -ld /srv/devops-project
 
 End of Day 4. 2026 june 6
+
+
+# Day 5
+
+**Topic:** Linux User Account Files
+
+**Commands learned:**
+- `grep username /etc/passwd` - find user account info
+- `grep groupname /etc/group` - find group info
+- `id username` - show UID, GID and groups
+- `sudo grep username /etc/shadow` - check password hash entry
+- `ls -l /etc/passwd` - check file permissions
+- `ls -l /etc/shadow` - check secure password file permissions
+
+**Important files:**
+- `/etc/passwd` - stores basic user account information
+- `/etc/shadow` - stores encrypted password hashes and password aging info
+- `/etc/group` - stores group information and members
+- `/etc/gshadow` - secure group information file
+
+**Today I learned:**
+- Linux stores user and group information in system files under `/etc`.
+- `/etc/passwd` contains username, UID, GID, home directory and shell.
+- `/etc/shadow` contains password hashes and is protected for security.
+- `/etc/group` shows groups and their members.
+- Commands like `adduser`, `passwd`, `groupadd`, and `usermod` update these files behind the scenes.
+
+**Practice:**
+```bash
+grep kian /etc/passwd
+grep testdev /etc/passwd
+grep devops /etc/group
+id kian
+id testdev
+sudo grep kian /etc/shadow
+ls -l /etc/passwd
+ls -l /etc/shadow
+
+
+End of Day 5. 2026 june 7
