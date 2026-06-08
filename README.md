@@ -140,3 +140,47 @@ ls -l /etc/shadow
 
 
 End of Day 5. 2026 june 7
+
+
+
+# Day 6
+
+**Topic:** File Security & Permissions
+
+**Commands learned:**
+- `ls -l` - check file ownership and permissions
+- `chmod` - change file permissions
+- `chown` - change file owner
+- `chgrp` - change group owner
+- `chmod +x` - make file executable
+- `chmod 755` - numeric permission mode
+- `chmod 700` - restrict access to owner only
+
+**Permission model:**
+- `r` = 4
+- `w` = 2
+- `x` = 1
+- 755 → rwx r-x r-x
+- 700 → rwx --- ---
+
+**Today I learned:**
+- Every file has an owner and a group.
+- Linux permissions are divided into user, group, and others.
+- Numeric permissions are commonly used in DevOps environments.
+- Most “Permission denied” errors are caused by incorrect ownership or missing execute permission.
+- Sticky bit (`t`) protects shared directories like `/tmp`.
+
+**Practice:**
+```bash
+mkdir secure-project
+touch secure-project/data.txt
+chmod 700 secure-project
+touch test.sh
+echo "echo Hello DevOps" > test.sh
+chmod +x test.sh
+./test.sh
+ls -l
+
+End of Day 6. 2026 june 8
+
+
