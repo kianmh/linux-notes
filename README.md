@@ -183,4 +183,33 @@ ls -l
 
 End of Day 6. 2026 june 8
 
+# Day 7
+
+**Topic:** Special Permissions in Linux
+
+**Concepts learned:**
+- `SUID` (Set User ID)
+- `SGID` (Set Group ID)
+- `Sticky Bit`
+
+**Key points:**
+- `SUID` allows an executable file to run with the permissions of its owner.
+- `SGID` on a file allows it to run with the permissions of its group.
+- `SGID` on a directory makes new files inherit the directory’s group.
+- `Sticky Bit` on a shared directory prevents users from deleting each other’s files.
+
+**Important numeric values:**
+- `4` = SUID
+- `2` = SGID
+- `1` = Sticky Bit
+
+**Examples:**
+```bash
+chmod 4755 file
+chmod 2775 /srv/dev-project
+chmod 1777 /shared-temp
+
+End of Day 7. 2026 june 9
+
+
 
