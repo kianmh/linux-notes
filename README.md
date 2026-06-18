@@ -212,4 +212,73 @@ chmod 1777 /shared-temp
 End of Day 7. 2026 june 9
 
 
+# Day 8 : practice
+Topic: Linux Users, Groups, and Project Permissions Lab
+
+Concepts learned:
+
+    Creating users and groups
+    Managing group membership
+    File ownership (chown, chgrp)
+    File and directory permissions (chmod)
+    SGID for shared project directories
+    Access Control Lists (ACL)
+    Sticky Bit for shared directories
+
+Key points:
+
+    Users and groups are managed through /etc/passwd, /etc/shadow, /etc/group, and /etc/gshadow.
+    usermod -aG is used to add a user to a secondary group.
+    chown changes the owner and group of a file or directory.
+    chmod changes file permissions using numeric or symbolic modes.
+    SGID on a directory ensures that new files inherit the directory’s group.
+    ACL allows granting permissions to specific users without changing global permissions.
+    Sticky Bit prevents users from deleting files owned by other users in shared directories.
+
+Project directory structure:
+   /srv/new_project
+   app
+   logs
+   tmp
+   docs
+   scripts
+
+Important commands practiced:
+
+groupadd devops
+groupadd qa
+
+adduser dev1
+adduser dev2
+adduser tester1
+
+usermod -aG devops dev1
+usermod -aG devops dev2
+usermod -aG qa tester1
+
+mkdir -p /srv/new_project/{app,logs,tmp,docs,scripts}
+
+chown -R root:devops /srv/new_project
+chmod -R 770 /srv/new_project
+
+find /srv/new_project -type d -exec chmod 2770 {} \;
+
+setfacl -m u:tester1:x /srv/new_project
+setfacl -m u:tester1:rx /srv/new_project/docs
+
+chmod 1777 /srv/new_project/tmp
+
+Example checks:
+
+id dev1
+groups dev2
+ls -ld /srv/new_project
+ls -l /srv/new_project/app/main.py
+getfacl /srv/new_project/docs
+
+
+End of Day 8. 2026 June 10
+
+
+
 
