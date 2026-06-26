@@ -279,6 +279,81 @@ getfacl /srv/new_project/docs
 
 End of Day 8. 2026 June 10
 
+Day 9
+
+Topic: Special Permissions and Permission Debugging in Linux
+
+Concepts learned:
+
+    Investigating SUID binaries
+    Searching for special permissions
+    Parent directory permission problems
+    Ownership management (chown, chgrp)
+    Numeric vs symbolic permissions
+    Script execution permissions
+    Debugging common permission errors
+
+Key points:
+
+    SUID allows a program to run with the privileges of the file owner.
+    SGID ensures group inheritance inside shared directories.
+    Sticky Bit protects files in shared writable directories.
+    Directory access requires execute (x) permission.
+    Users must have execute permission on all parent directories to reach a path.
+    Only the file owner or root can change file permissions using chmod.
+    Incorrect ownership or directory permissions are common causes of Permission denied.
+
+Ex.
+ls -l /usr/bin/passwd
+
+find /usr/bin -perm -4000 -type f
+sudo find / -perm -2000
+sudo find / -perm -1000 -type d
+
+Ownership Ex.
+chown root:devops config.yml
+chgrp devops config.yml
+chown dev1 config.yml
+
+
+
+
+Permission Ex.
+chmod 750 deploy.sh
+chmod g+w file
+chmod u+x script.sh
+chmod o-rwx secret.txt
+
+Script execution ex:
+
+                                                                    
+chmod +x /srv/new_project/scripts/deploy.sh
+/srv/new_project/scripts/deploy.sh
+
+Debugging Ex.
+
+                                                                    
+chmod 660 /srv/new_project/scripts
+chmod 2770 /srv/new_project/scripts
+
+chown root:qa /srv/new_project/app
+chown root:devops /srv/new_project/app
+
+Common troubleshooting tools:
+
+                                                                    
+ls -l
+ls -ld
+id
+groups
+getfacl
+find
+
+End of Day 9. 2026 June  26
+
+
+
+
 
 
 
