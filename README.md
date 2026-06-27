@@ -351,7 +351,47 @@ find
 
 End of Day 9. 2026 June  26
 
+# Day 10
 
+**Topic:** Process Monitoring in Linux
+
+**Concepts learned:**
+- Process
+- PID (Process ID)
+- CPU usage
+- Memory usage
+- Process monitoring tools
+
+**Key points:**
+- Every running program in Linux is a process.
+- Each process has a unique PID.
+- `ps` shows a snapshot of current processes.
+- `ps aux` shows processes for all users in the system.
+- `top` provides a live view of running processes and system resource usage.
+- `htop` is a more interactive and user-friendly version of `top`.
+- `%CPU` and `%MEM` help identify resource-heavy processes.
+
+**Commands practiced:**
+```bash
+ps
+ps aux
+top
+htop
+ps aux | grep nginx
+ps aux --sort=-%cpu | head
+ps aux --sort=-%mem | head
+
+
+Examples:
+
+                                                                    
+ps
+ps aux
+top
+ps aux | grep ssh
+ps aux --sort=-%cpu | head
+
+End of Day 10. 2026 June 27
 
 
 
